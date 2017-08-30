@@ -1,0 +1,11 @@
+{
+  "name": "react-lingo",
+  "version": "0.0.1",
+  "description": "Lingo i18n for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Matantsev <nick.matantsev@gmail.com>",
+  "license": "ISC"
+}
