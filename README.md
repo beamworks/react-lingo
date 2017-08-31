@@ -6,11 +6,11 @@ Component-friendly i18n. Optimized for developer workflow (adding/removing trans
 
 Translation file `MyComponent.i18n.json`:
 
-```
+```json
 {
     "HELLO_WORLD": {
         "en-US": "Hello world!",
-        "fr-FR": "Bonjour le monde"
+        "fr-FR": "Bonjour le monde!"
     },
     "PLEASE_ENTER_PASSWORD": {
         "en-US": "Please enter your password",
@@ -21,7 +21,7 @@ Translation file `MyComponent.i18n.json`:
 
 Component file `MyComponent.jsx`:
 
-```
+```js
 import XL from './MyComponent.i18n.json';
 
 class MyComponent extends React.PureComponent {
