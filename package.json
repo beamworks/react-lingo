@@ -1,6 +1,6 @@
 {
   "name": "react-lingo",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Lingo i18n for React",
   "main": "index.js",
   "scripts": {
