@@ -36,3 +36,18 @@ class MyComponent extends React.PureComponent {
     }
 }
 ```
+
+Somewhere at page load time:
+
+```
+window.LINGO_LOCALE = 'en-US';
+```
+
+Rendered output:
+
+```
+<div class="my-component">
+    <h1>Hello world!</h1>
+    <span>Please enter your password</span>
+</div>
+```
