@@ -1,7 +1,7 @@
 // @todo name the function for debug purposes
 // @todo carry this out into shared central module that is required per loader site
 function XL(props) {
-    const localeName = 'en'; // @todo this
+    const localeName = window.LINGO_LOCALE; // @todo this better
     const keyMap = this[localeName] || {};
 
     return props.children(keyMap);
