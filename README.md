@@ -37,7 +37,7 @@ class MyComponent extends React.PureComponent {
 }
 ```
 
-Configure Lingo context at runtime with current locale (usually in app root component):
+Wrap everything in Lingo context (usually in app root component):
 
 ```
 ...
