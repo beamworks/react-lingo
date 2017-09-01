@@ -37,15 +37,19 @@ class MyComponent extends React.PureComponent {
 }
 ```
 
-Somewhere at page load time:
+Configure Lingo context at runtime with current locale (usually in app root component):
 
 ```
-window.LINGO_LOCALE = 'en-US';
+...
+<LingoContext locale={userLocale || 'en-US'}>
+    ... rendered app components with XL tags go here ...
+</LingoContext>
+...
 ```
 
 Rendered output:
 
-```
+```html
 <div class="my-component">
     <h1>Hello world!</h1>
     <span>Please enter your password</span>
