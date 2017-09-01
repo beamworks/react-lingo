@@ -6,5 +6,6 @@ const prepData = require('./prepData');
 module.exports = function (source) {
     const lingoData = JSON.parse(source);
 
-    return 'module.exports = (' + main.XL.toString() + ').bind(' + JSON.stringify(prepData(lingoData)) + ')';
+    // @todo require defineXL as shared dependency
+    return 'module.exports = (' + main._defineXL.toString() + ')(' + JSON.stringify(prepData(lingoData)) + ')';
 };
