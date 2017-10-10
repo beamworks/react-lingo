@@ -1,11 +1,21 @@
 const fs = require('fs');
 const path = require('path');
+const minimist = require('minimist');
 const csvParse = require('csv-parse');
 const through = require('through');
 
-// @todo get from argv
-const baseLocale = 'en';
-const targetLocale = 'fr';
+// grab the needed arguments
+const argv = minimist(process.argv.slice(2));
+const baseLocale = argv.base;
+const targetLocale = argv.locale;
+
+if (!baseLocale) {
+    throw new Error('use --base parameter to define base locale');
+}
+
+if (!targetLocale) {
+    throw new Error('use --locale parameter to define target locale');
+}
 
 const jsonWorkset = {};
 const modifiedFileSet = {};

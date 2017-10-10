@@ -20,6 +20,7 @@
     "csv-parse": "^1.2.4",
     "csv-stringify": "^1.0.4",
     "glob": "^7.1.2",
+    "minimist": "^1.2.0",
     "through": "^2.3.8"
   }
 }

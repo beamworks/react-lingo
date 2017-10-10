@@ -1,10 +1,20 @@
 const fs = require('fs');
 const glob = require('glob');
+const minimist = require('minimist');
 const csvStringify = require('csv-stringify');
 
-// @todo get from argv
-const baseLocale = 'en';
-const targetLocale = 'fr';
+// grab the needed arguments
+const argv = minimist(process.argv.slice(2));
+const baseLocale = argv.base;
+const targetLocale = argv.locale;
+
+if (!baseLocale) {
+    throw new Error('use --base parameter to define base locale');
+}
+
+if (!targetLocale) {
+    throw new Error('use --locale parameter to define target locale');
+}
 
 glob('**/*.i18n.json', function (err, jsonPathList) {
     if (err) {
