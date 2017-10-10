@@ -27,8 +27,8 @@ process.stdin.pipe(
         // process data changes from the translation file row
         const unsafeFilePath = row[0];
         const i18nKey = row[1];
-        const baseValue = row[2] || '';
-        const targetTranslation = row[3] || '';
+        const baseValue = row[2] || ''; // @todo trim/sanitize
+        const targetTranslation = row[3] || ''; // @todo trim/sanitize
 
         // sanitize file path that we will be modifying
         const filePath = path.relative('.', unsafeFilePath);
