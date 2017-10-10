@@ -115,3 +115,5 @@ node_modules/.bin/lingo-import --base=en-US --locale=fr-FR > i18n-latest.csv
 Then review the JSON file changes and commit/push them as usual. For further translation passes, simply re-run the export process, fill in any new blanks as needed, then re-import.
 
 Developers must be careful when changing the base locale wording for already-translated text: make sure that the other language values are cleared out for that key. This makes it easier to see what needs to be re-translated again. Even better approach is to create a new translation key and delete the old one, since even small changes in wording make for a different meaning.
+
+The above commands can be "baked in" npm scripts for consistency. It helps to add the `i18n-latest.csv` (or whichever temp name you pick) to `.gitignore`, since the CSV file is auto-generated and not meant to be checked into the repo.
